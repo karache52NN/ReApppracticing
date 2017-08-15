@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <div id="content">
+
+            </div>
+        </header>
+        <!-- Add your site or application content here -->
+
+
+
+
+
+
+
+
+
+
+        <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+        <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+        <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+        <script src="https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"></script>
+        <script src="https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/babel">
+            /*here the code*/
+
+            class App extends React.Component{
+                getText(){
+                    return <h1>getText working...</h1>;
+                }
+
+                render(){
+                    /*
+                    const num1=1;
+                    const num2=4;
+                    const namer="myClass";
+                    const cssVal="red"
+                    const mystyle={color: cssVal, fontSize: "20px", outline: "1px dashed red"};
+                    var string=(
+                        <ul>
+                            <li id={num1+num2} className={namer} style={mystyle}>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+
+                    );
+
+
+                    return string;
+                    */
+                    const summoner=this.getText();
+                    const arr=[1, 2, 3, 4, 5];
+                    const list = arr.map(function (item, index) {
+                        return <li key={index}>{item}</li>;
+
+                    });
+                    return (
+                        <div>
+                            <ul>
+                                {list}
+                            </ul>
+                            <div>{summoner}</div>
+                            <div>{this.getText()}</div>
+                        </div>
+                    );
+                }
+
+            }
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById("content")
+
+            );
+
+        </script>
+
+
+
+    </body>
+</html>
